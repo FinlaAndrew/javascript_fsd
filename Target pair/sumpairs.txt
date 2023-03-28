@@ -1,0 +1,19 @@
+function findSumPairs(arr, target) {
+  let pairs = [];
+  for(let i=0; i<arr.length; i++) {
+   for(let j=i+1; j<arr.length; j++) {
+      if(arr[i] + arr[j] === target) {
+        pairs.push([arr[i], arr[j]]);
+      }
+    }
+  }
+  
+  return pairs;
+}
+const numbersInput = prompt('Enter the numbers: ');
+const numbers = numbersInput.split(",").map(Number);
+const target = Number(prompt('Enter the target: '));
+const pairs = findSumPairs(numbers, target);
+console.log(`Pairs: `,pairs);
+
+

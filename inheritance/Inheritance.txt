@@ -1,0 +1,44 @@
+class Person {
+  constructor(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
+
+  introduce() {
+    console.log(`Hi, my name is ${this.name}, I am ${this.age} years old, and I identify as ${this.gender}.`);
+  }
+}
+
+class Student extends Person {
+  constructor(name, age, gender, grade) {
+    super(name, age, gender);
+    this.grade = grade;
+  }
+
+  study() {
+    console.log(`${this.name} is studying hard to get good grades.`);
+  }
+}
+
+class Employee extends Person {
+  constructor(name, age, gender, jobTitle) {
+    super(name, age, gender);
+    this.jobTitle = jobTitle;
+  }
+
+  work() {
+    console.log(`${this.name} is working hard as a ${this.jobTitle}.`);
+  }
+}
+
+class Father extends Person {
+  constructor(name, age, gender, children) {
+    super(name, age, gender);
+    this.children = children;
+  }
+
+  parent() {
+    console.log(`${this.name} is the proud father of ${this.children}.`);
+  }
+}

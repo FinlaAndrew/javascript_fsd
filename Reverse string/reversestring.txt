@@ -1,0 +1,12 @@
+function reverseString(string) {
+    if (!/^[a-zA-Z\s]+$/.test(string)) {
+        return "This function only supports English language";
+    }
+    else{
+       return string.split("").reverse().join(""); 
+    }
+  
+}
+let n= prompt("Enter string: ");
+let x=reverseString(n);
+console.log(x);
